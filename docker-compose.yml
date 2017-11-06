@@ -12,6 +12,7 @@ services:
     volumes:
       - ./hello-world:/home/node/hello-world
       - /hello-world/node_modules
+      - /hello-world/Dockerfile
     ports:
       - '8081:8081'
 volumes:
