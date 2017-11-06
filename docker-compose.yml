@@ -7,3 +7,12 @@ services:
       - /api/node_modules
     ports:
       - "3000:3000"
+  hello-world:
+    build: ./hello-world
+    volumes:
+      - ./hello-world:/home/node/hello-world
+      - /hello-world/node_modules
+    ports:
+      - '8081:8081'
+volumes:
+  helloworld:
