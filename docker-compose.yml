@@ -4,3 +4,4 @@ services:
     build: ./api
     volumes:
       - ./api:/home/node/api
+      - /api/node_modules
