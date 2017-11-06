@@ -17,13 +17,13 @@
   - IDE - https://code.visualstudio.com/
 
 - [ ] Presentation: What are web components / Polymer, why should I care? (@btopro) (35 min)
+
 # Getting into polymer
+
+## Start Docker Services
+- [ ] `make start`
+
 ## Making a hello world element (@hey__mp)
-- [ ] Running Docker
-  - `make start`
-- [ ] Open up hello-world
-  - `make run-helloworld
-  - `polymer init`
 - [ ] polymer init
 - [ ] understanding the structure of this repo
   - add some css
