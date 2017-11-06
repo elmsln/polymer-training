@@ -2,7 +2,7 @@ SHELL := /usr/bin/env bash
 
 start:
 	docker-compose build
-	docker-compose up
+	docker-compose up -d
 
 # Remove ANY containers and volumes associated with this compose-up.
 clean:
@@ -15,3 +15,6 @@ rebuild:
 
 top:
 	docker-compose top
+
+run-api:
+	docker-compose run api /bin/bash

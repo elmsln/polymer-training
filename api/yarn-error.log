@@ -1,0 +1,77 @@
+Arguments: 
+  /usr/local/bin/node /opt/yarn/bin/yarn.js init
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+Yarn version: 
+  1.1.0
+
+Node version: 
+  6.11.4
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+    "name": "api",
+    "version": "0.0.0",
+    "description": "A new Trails.js Application",
+    "homepage": "http://trailsjs.io",
+    "author": {
+      "name": "heyMP",
+      "email": "mgp140@gmail.com",
+      "url": "https://github.com/trailsjs"
+    },
+    "main": "index.js",
+    "keywords": [
+      "",
+      "trails",
+      "trailsjs"
+    ],
+    "dependencies": {
+      "trailpack-footprints": "^2.0.0",
+      "trailpack-hapi": "^2.2.0",
+      "trailpack-repl": "v2-latest",
+      "trailpack-router": "v2-latest",
+      "trailpack-waterline": "^2.0.0-rc2",
+      "trails": "v2-latest",
+      "winston": "^2.3"
+    },
+    "devDependencies": {
+      "eslint": "^2.11",
+      "eslint-config-trails": "^2",
+      "mocha": "^2.5",
+      "supertest": "^1.2"
+    },
+    "scripts": {
+      "test": "eslint . && mocha"
+    },
+    "engines": {
+      "node": ">= 4.0.0"
+    },
+    "eslintConfig": {
+      "extends": "trails"
+    },
+    "repository": "heyMP/api"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/opt/yarn/lib/cli.js:119877:13)
+      at emitNone (events.js:86:13)
+      at Interface.emit (events.js:185:7)
+      at Interface._ttyWrite (readline.js:724:16)
+      at ReadStream.onkeypress (readline.js:119:10)
+      at emitTwo (events.js:106:13)
+      at ReadStream.emit (events.js:191:7)
+      at emitKeys (internal/readline.js:389:14)
+      at next (native)
+      at ReadStream.onData (readline.js:970:36)

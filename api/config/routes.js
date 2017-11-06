@@ -27,5 +27,11 @@ module.exports = [
     method: [ 'GET' ],
     path: '/api/v1/default/info',
     handler: 'DefaultController.info'
+  },
+
+  {
+    method: [ 'GET' ],
+    path: '/api/v1/firstcontroller/sayhello/{prefix}',
+    handler: 'FirstController.sayHello'
   }
 ]

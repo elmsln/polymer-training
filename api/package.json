@@ -27,7 +27,9 @@
     "eslint": "^2.11",
     "eslint-config-trails": "^2",
     "mocha": "^2.5",
-    "supertest": "^1.2"
+    "supertest": "^1.2",
+    "yo": "^2.0",
+    "generator-trails":"^2.0"
   },
   "scripts": {
     "test": "eslint . && mocha"
