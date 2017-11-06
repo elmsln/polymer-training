@@ -5,3 +5,6 @@ FROM node:6.11.4
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 # COPY package.json npm-shrinkwrap.json $HOME/app/
 USER node
+
+WORKDIR /home/node/api
+CMD [ "npm", "start" ]
