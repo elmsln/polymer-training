@@ -31,7 +31,7 @@ module.exports = [
 
   {
     method: [ 'GET' ],
-    path: '/api/v1/firstcontroller/sayhello/{prefix}',
+    path: '/api/v1/firstcontroller/sayhello',
     handler: 'FirstController.sayHello'
   }
 ]
