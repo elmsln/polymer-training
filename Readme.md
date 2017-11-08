@@ -21,17 +21,32 @@
 # Getting into polymer
 
 ## Start Docker Services
-- [ ] `make start`
+- [ ] Start all Services
+  - `make start`
 
-## Making a hello world element (@hey__mp)
-- [ ] polymer init
-- [ ] understanding the structure of this repo
-  - add some css
-  - add HTML
-  - add a property (String, Boolean, Array, something like that)
-  - ReflectToAttribute
-- [ ] make the property show up
-- [ ] update the demo to reflect this property
+## Making a hello-world element (@hey__mp)
+
+### Creating Polymer hello-world element
+- [ ] Connect to the hello-world container
+  - `make connect-helloworld`
+- [ ] Look around to see what files we have
+  - `ls -la`
+- [ ] Create `hello-world`
+  - `polymer init`
+  - Name: `hello-world`
+  - Description: `My hello world`
+- [ ] Restart Container
+  - `make start-hello-world`
+- [ ] Open Preview at [http://localhost:8082/components/hello-world](http://localhost:8082/components/hello-world)
+
+### Adding to the element
+- [ ] Understanding the structure of this repo
+- [ ] Add some css
+- [ ] Add HTML
+- [ ] Add a property (String, Boolean, Array, something like that)
+- [ ] ReflectToAttribute
+- [ ] Make the property show up
+- [ ] Update the demo to reflect this property
 
 (Noon Break for lunch)
 
@@ -47,7 +62,7 @@
 ### Identify accessbility / mobile issues with current
   - add paper-button (to touch whole thing)
   - webcomponents.org / bower install process
- 
+
 - [ ] update the demo to use these properties
 - [ ] Cover `<template is="dom-if" if="">` for if there's no link
 - [ ] add a toast via https://www.webcomponents.org/element/PolymerElements/paper-toast

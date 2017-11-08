@@ -19,5 +19,8 @@ top:
 connect-helloworld:
 	docker-compose run hello-world /bin/bash
 
-run-api:
-	docker-compose run api
+start-helloworld:
+	docker-compose up -d hello-world
+
+start-api:
+	docker-compose up -d api

@@ -13,4 +13,4 @@ services:
       - ./hello-world:/home/node/html
       - ./hello-world/Dockerfile:/home/node/html/Dockerfile:ro
     ports:
-      - '8081:8081'
+      - '8082:8081'
