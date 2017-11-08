@@ -53,7 +53,7 @@
 ## Build upon this element Start at 1:30pm
 - [ ] Start Docker Container
   - `make start-awesomeexplosion`
-- [ ] Open Preview at [http://localhost:8083/components/hello-world](http://localhost:8083/components/hello-world)
+- [ ] Open Preview at [http://localhost:8083/components/awesome-explosion](http://localhost:8083/components/awesome-explosion)
 
 ### Identify the variables we could add
 - What fields would make up the content type?
