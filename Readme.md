@@ -51,9 +51,9 @@
 (Noon Break for lunch)
 
 ## Build upon this element Start at 1:30pm
-- `git clone https://github.com/LRNWebComponents/awesome-explosion`
-- `bower install`
-- `polymer serve --open`
+- [ ] Start Docker Container
+  - `make start-awesomeexplosion`
+- [ ] Open Preview at [http://localhost:8083/components/hello-world](http://localhost:8083/components/hello-world)
 
 ### Identify the variables we could add
 - What fields would make up the content type?

@@ -22,5 +22,8 @@ connect-helloworld:
 start-helloworld:
 	docker-compose up -d hello-world
 
+start-awesomeexplosion:
+	docker-compose up -d awesome-explosion
+
 start-api:
 	docker-compose up -d api
