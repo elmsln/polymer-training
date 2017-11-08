@@ -7,7 +7,6 @@ RUN npm install -g bower
 USER node
 WORKDIR /home/node
 
-WORKDIR /home/node/hello-world
-COPY . .
+WORKDIR /home/node/html
 CMD [ "polymer", "serve", "-H", "0.0.0.0", "-p", "8081" ]
 EXPOSE 8081

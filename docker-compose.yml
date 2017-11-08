@@ -10,10 +10,7 @@ services:
   hello-world:
     build: ./hello-world
     volumes:
-      - ./hello-world:/home/node/hello-world
-      - /hello-world/node_modules
-      - /hello-world/Dockerfile
+      - ./hello-world:/home/node/html
+      - ./hello-world/Dockerfile:/home/node/html/Dockerfile:ro
     ports:
       - '8081:8081'
-volumes:
-  helloworld:

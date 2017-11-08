@@ -16,7 +16,7 @@ rebuild:
 top:
 	docker-compose top
 
-run-helloworld:
+connect-helloworld:
 	docker-compose run hello-world /bin/bash
 
 run-api:
