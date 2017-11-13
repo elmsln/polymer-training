@@ -92,10 +92,5 @@ make start
 - [ ] update the demo to reflect this
 - [ ] add a paper-textarea for a silly two-way data binding example to title
 
-# iron-ajax - two-way data binding with JSON
-- [ ] get iron-ajax tag
-- [ ] use iron-ajax
-- [ ] add property for source-path
-- [ ] use `<template is="dom-repeat" items="{{data}}">`
-- [ ] update demo to reflect usage of source-path
-- [ ] Make a whole ton of awesome explosions off of a json file
+# iron-ajax
+- [ ] Open Preview at [http://localhost:8084/components/starwars-searcher](http://localhost:8083/components/starwars-searcher)
