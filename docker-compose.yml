@@ -19,5 +19,10 @@ services:
     volumes:
       - ./awesome-explosion:/home/node/html
       - ./awesome-explosion/Dockerfile:/home/node/html/Dockerfile:ro
+  youtube-searcher:
+    build: ./youtube-searcher
+    volumes:
+      - ./youtube-searcher:/home/node/html
+      - ./youtube-searcher/Dockerfile:/home/node/html/Dockerfile:ro
     ports:
-      - '8083:8081'
+      - '8084:8081'

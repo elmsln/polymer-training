@@ -1,0 +1,6 @@
+{
+  "name": "youtube-searcher",
+  "short_name": "youtube-searcher",
+  "start_url": "/",
+  "display": "standalone"
+}
