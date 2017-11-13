@@ -1,5 +1,6 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../iron-ajax/iron-ajax.html">
+<link rel="import" href="../paper-card/paper-card.html">
 
 <!--
 `starwars-searcher`
@@ -14,6 +15,16 @@
       :host {
         display: block;
       }
+      #cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      paper-card {
+        max-width: 400px;
+        margin-bottom: 1em;
+        width: 100%;
+      }
     </style>
 
     <h1>Star Wars Characters</h1>
@@ -25,11 +36,21 @@
        handle-as="json"
        on-response="_getPeopleHandler"></iron-ajax>
 
-    <ul>
+    <div id="cards">
       <template is="dom-repeat" is="dom-repeat" items="[[people]]" as="person">
-        <li>[[person.name]]</li>
+          <paper-card heading="[[person.name]]">
+            <div class="card-content">
+              <h3>Stats</h3>
+              <ul>
+                <li>Mass: [[person.mass]]</li>
+                <li>Birth Year: [[person.birth_year]]</li>
+                <li>Eye Color: [[person.eye_color]]</li>
+                <li>Hair Color: [[person.hair_color]]</li>
+              </ul>
+            </div>
+          </paper-card>
       </template>
-    </ul>
+    </div>
 
   </template>
 
