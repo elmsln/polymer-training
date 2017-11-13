@@ -1,5 +1,6 @@
 # \<starwars-searcher\>
 
+![](screenshot.gif)
 
 
 ## Install the Polymer-CLI
