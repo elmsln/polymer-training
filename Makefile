@@ -30,12 +30,12 @@ start-awesomeexplosion:
 connect-awesomeexplosion:
 	docker-compose run awesome-explosion /bin/bash
 
-# youtube-searcher
-start-youtubesearcher:
-	docker-compose up -d youtube-searcher
+# starwars-searcher
+start-starwarssearcher:
+	docker-compose up -d starwars-searcher
 
-connect-youtubesearcher:
-	docker-compose run youtube-searcher /bin/bash
+connect-starwarssearcher:
+	docker-compose run starwars-searcher /bin/bash
 
 # API
 start-api:

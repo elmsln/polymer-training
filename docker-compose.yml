@@ -19,10 +19,10 @@ services:
     volumes:
       - ./awesome-explosion:/home/node/html
       - ./awesome-explosion/Dockerfile:/home/node/html/Dockerfile:ro
-  youtube-searcher:
-    build: ./youtube-searcher
+  starwars-searcher:
+    build: ./starwars-searcher
     volumes:
-      - ./youtube-searcher:/home/node/html
-      - ./youtube-searcher/Dockerfile:/home/node/html/Dockerfile:ro
+      - ./starwars-searcher:/home/node/html
+      - ./starwars-searcher/Dockerfile:/home/node/html/Dockerfile:ro
     ports:
       - '8084:8081'

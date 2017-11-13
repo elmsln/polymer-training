@@ -1,6 +1,6 @@
 {
-  "name": "youtube-searcher",
-  "main": "index.html",
+  "name": "starwars-searcher",
+  "main": "starwars-searcher.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.4.0"
   },

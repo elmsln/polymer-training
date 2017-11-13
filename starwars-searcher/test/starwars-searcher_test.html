@@ -4,25 +4,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>youtube-searcher-app test</title>
+    <title>starwars-searcher test</title>
 
-    <script src="../../../webcomponentsjs/webcomponents-lite.js"></script>
-    <script src="../../../web-component-tester/browser.js"></script>
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
 
-    <link rel="import" href="../../src/youtube-searcher-app/youtube-searcher-app.html">
+    <link rel="import" href="../starwars-searcher.html">
   </head>
   <body>
     <test-fixture id="basic">
       <template>
-        <youtube-searcher-app></youtube-searcher-app>
+        <starwars-searcher></starwars-searcher>
       </template>
     </test-fixture>
 
     <script>
-      suite('youtube-searcher-app', function() {
+      suite('starwars-searcher', function() {
         test('instantiating the element works', function() {
           var element = fixture('basic');
-          assert.equal(element.is, 'youtube-searcher-app');
+          assert.equal(element.is, 'starwars-searcher');
         });
       });
     </script>
