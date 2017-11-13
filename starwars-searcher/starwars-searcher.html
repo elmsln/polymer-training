@@ -15,7 +15,8 @@
         display: block;
       }
     </style>
-    <h2>Hello [[prop1]]!</h2>
+
+    <h1>Star Wars Characters</h1>
 
     <iron-ajax
        auto
@@ -23,6 +24,12 @@
        url="https://swapi.co/api/people/"
        handle-as="json"
        on-response="_getPeopleHandler"></iron-ajax>
+
+    <ul>
+      <template is="dom-repeat" is="dom-repeat" items="[[people]]" as="person">
+        <li>[[person.name]]</li>
+      </template>
+    </ul>
 
   </template>
 
@@ -32,13 +39,16 @@
       is: 'starwars-searcher',
 
       properties: {
-        prop1: {
-          type: String,
-          value: 'starwars-searcher',
-        },
+        people: {
+          type: Array,
+          value: [],
+        }
       },
       _getPeopleHandler: function (e) {
-        console.log(e);
+        const response = e.detail.response;
+        const people = response.results;
+        this.set('people', people);
+        console.log(this.people);
       }
 
     });
