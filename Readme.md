@@ -1,5 +1,26 @@
 # Overview
 
+## Installation
+
+This repo is made up of three different projects: hello-world, awesome-explosion, and starwars-searcher. Each of these are polymer projects that use node, polymer-cli, and bower to install and run. There are two ways to install the depenendencies needed to run these projects. Docker and Manual. The two methods are outlined below.
+
+### Docker
+
+Install Docker from the official Docker website. Either Docker for Mac or Docker for Windows. [https://www.docker.com/](https://www.docker.com/)
+
+Install Git from [https://git-scm.com/](https://git-scm.com/)
+
+Once you have Git installed, git clone the [polymerday repo](https://github.com/LRNWebComponents/polymer-training).
+```
+git clone https://github.com/LRNWebComponents/polymer-training.git
+cd polymer-training
+```
+
+Start Docker containers
+```
+make start
+```
+
 ## Resources
 - Poylmer Docs - https://www.polymer-project.org/1.0/docs/devguide/feature-overview
 - Webcomponents . org - https://www.webcomponents.org/
