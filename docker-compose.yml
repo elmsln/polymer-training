@@ -1,12 +1,5 @@
 version: '3'
 services:
-  api:
-    build: ./api
-    volumes:
-      - ./api:/home/node/api
-      - /api/node_modules
-    ports:
-      - "3000:3000"
   hello-world:
     build: ./hello-world
     volumes:
