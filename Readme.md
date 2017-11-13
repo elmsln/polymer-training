@@ -21,6 +21,12 @@ Start Docker containers
 make start
 ```
 
+This should have started projects at the following locations:
+- [http://localhost:8082/components/hello-world](http://localhost:8082/components/hello-world)
+- [http://localhost:8083/components/awesome-explosion](http://localhost:8083/components/awesome-explosion)
+- [http://localhost:8084/components/starwars-searcher](http://localhost:8084/components/starwars-searcher)
+
+
 ## Resources
 - Poylmer Docs - https://www.polymer-project.org/1.0/docs/devguide/feature-overview
 - Webcomponents . org - https://www.webcomponents.org/
