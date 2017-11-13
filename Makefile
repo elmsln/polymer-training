@@ -25,5 +25,8 @@ start-helloworld:
 start-awesomeexplosion:
 	docker-compose up -d awesome-explosion
 
+connect-awesomeexplosion:
+	docker-compose run awesome-explosion /bin/bash
+
 start-api:
 	docker-compose up -d api
