@@ -12,6 +12,8 @@ services:
     volumes:
       - ./awesome-explosion:/home/node/html
       - ./awesome-explosion/Dockerfile:/home/node/html/Dockerfile:ro
+    ports:
+      - '8083:8081'
   starwars-searcher:
     build: ./starwars-searcher
     volumes:
