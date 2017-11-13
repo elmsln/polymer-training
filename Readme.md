@@ -6,7 +6,7 @@ This repo is made up of three different projects: hello-world, awesome-explosion
 
 ### Docker
 
-Install Docker from the official Docker website. Either Docker for Mac or Docker for Windows. [https://www.docker.com/](https://www.docker.com/)
+Install Docker from the official Docker website. Either [Docker for Mac](https://www.docker.com/docker-mac) or [Docker for Windows](https://www.docker.com/docker-windows).
 
 Install Git from [https://git-scm.com/](https://git-scm.com/)
 
