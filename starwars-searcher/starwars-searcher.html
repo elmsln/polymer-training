@@ -1,4 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-ajax/iron-ajax.html">
 
 <!--
 `starwars-searcher`
@@ -15,6 +16,14 @@
       }
     </style>
     <h2>Hello [[prop1]]!</h2>
+
+    <iron-ajax
+       auto
+       id="get_people"
+       url="https://swapi.co/api/people/"
+       handle-as="json"
+       on-response="_getPeopleHandler"></iron-ajax>
+
   </template>
 
   <script>
@@ -28,6 +37,9 @@
           value: 'starwars-searcher',
         },
       },
+      _getPeopleHandler: function (e) {
+        console.log(e);
+      }
 
     });
   </script>
