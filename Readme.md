@@ -28,6 +28,8 @@ Mac Pro directions:
 cd ~/ && git clone https://github.com/LRNWebComponents/polymer-training.git && cd polymer-training && open -a /Applications/Docker.app && make start
 ```
 
+### Verify Installation
+
 This should have started projects at the following locations:
 - [http://localhost:8082/components/hello-world](http://localhost:8082/components/hello-world)
 - [http://localhost:8083/components/awesome-explosion](http://localhost:8083/components/awesome-explosion)
