@@ -23,7 +23,7 @@ Start Docker containers
 make start
 ```
 
-### - OR -
+#### - OR -
 
 Mac Pro directions:
 ```
@@ -36,6 +36,21 @@ This should have started projects at the following locations:
 - [http://localhost:8082/components/hello-world](http://localhost:8082/components/hello-world)
 - [http://localhost:8083/components/awesome-explosion](http://localhost:8083/components/awesome-explosion)
 - [http://localhost:8084/components/starwars-searcher](http://localhost:8084/components/starwars-searcher)
+
+
+### Manual (Non-Docker) Installation
+
+In case you can't install Docker or prefer not to here.
+
+- git - https://desktop.github.com/
+- node - https://nodejs.org/en/ (https://askubuntu.com/questions/925416/how-to-upgrade-node-js-from-4-2-to-6-11-0-on-ubuntu-16-04)
+- npm install -g polymer-cli@next
+- npm install -g bower
+
+
+### IDE
+
+We recommend using the [Visual Studio Code](https://code.visualstudio.com/) IDE.  They have a number of plugins that are really handy for Polymer development.  Definitely not required but we really like it. :)
 
 
 ## Resources
