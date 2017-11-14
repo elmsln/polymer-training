@@ -23,6 +23,8 @@ Start Docker containers
 make start
 ```
 
+### - OR -
+
 Mac Pro directions:
 ```
 cd ~/ && git clone https://github.com/LRNWebComponents/polymer-training.git && cd polymer-training && open -a /Applications/Docker.app && make start
