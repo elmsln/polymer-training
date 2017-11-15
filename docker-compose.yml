@@ -7,11 +7,11 @@ services:
       - ./hello-world/Dockerfile:/home/node/html/Dockerfile:ro
     ports:
       - '8082:8081'
-  awesome-explosion:
-    build: ./awesome-explosion
+  contact-card:
+    build: ./contact-card
     volumes:
-      - ./awesome-explosion:/home/node/html
-      - ./awesome-explosion/Dockerfile:/home/node/html/Dockerfile:ro
+      - ./contact-card:/home/node/html
+      - ./contact-card/Dockerfile:/home/node/html/Dockerfile:ro
     ports:
       - '8083:8081'
   starwars-searcher:

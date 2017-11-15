@@ -23,12 +23,12 @@ connect-helloworld:
 start-helloworld:
 	docker-compose up -d hello-world
 
-# awesome-explosion
-start-awesomeexplosion:
-	docker-compose up -d awesome-explosion
+# contact-card
+start-contactcard:
+	docker-compose up -d contact-card
 
-connect-awesomeexplosion:
-	docker-compose run awesome-explosion /bin/bash
+connect-contactcard:
+	docker-compose run contact-card /bin/bash
 
 # starwars-searcher
 start-starwarssearcher:
