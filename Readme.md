@@ -83,20 +83,7 @@ We recommend using the [Visual Studio Code](https://code.visualstudio.com/) IDE.
 
 ## Making a hello-world element (@hey__mp)
 
-### Creating Polymer hello-world element
-- [ ] Connect to the hello-world container
-  - `make connect-helloworld`
-- [ ] Look around to see what files we have
-  - `ls -la`
-- [ ] Create `hello-world`
-  - `polymer init`
-  - Name: `hello-world`
-  - Description: `My hello world`
-- [ ] Restart Container
-  - `make start-hello-world`
 - [ ] Open Preview at [http://localhost:8082/components/hello-world](http://localhost:8082/components/hello-world)
-
-### Adding to the element
 - [ ] Understanding the structure of this repo
 - [ ] Add some css
 - [ ] Add HTML
