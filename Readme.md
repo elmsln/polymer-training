@@ -125,4 +125,5 @@ We recommend using the [Visual Studio Code](https://code.visualstudio.com/) IDE.
 - [ ] add a paper-textarea for a silly two-way data binding example to title
 
 # iron-ajax 3:00pm
+- [ ] utilize a public API -- https://www.elmsln.org/user.json?field_display_public_profile=1
 - [ ] Open Preview at [http://localhost:8084/components/starwars-searcher](http://localhost:8084/components/starwars-searcher)
