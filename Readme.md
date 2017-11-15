@@ -83,20 +83,27 @@ We recommend using the [Visual Studio Code](https://code.visualstudio.com/) IDE.
 
 ## Making a hello-world element (@hey__mp)
 
-- [ ] Open Preview at [http://localhost:8082/components/hello-world](http://localhost:8082/components/hello-world)
-- [ ] Understanding the structure of this repo
-- [ ] Add some css
-- [ ] Add HTML
-- [ ] Add a property (String, Boolean, Array, something like that)
-- [ ] ReflectToAttribute
-- [ ] Make the property show up
-- [ ] Update the demo to reflect this property
+- [ ] open Preview at [http://localhost:8082/components/hello-world](http://localhost:8082/components/hello-world)
+- [ ] understanding the structure of this repo
+- [ ] add `name` property
+- [ ] create multiple hello world elements in demo with different names
+- [ ] add some css to the element
+- [ ] add a `theme` property
+- [ ] use reflectToAttribute
+- [ ] create `:host[theme="light"]` and `:host[theme="dark"]` css
+- [ ] update the demo to use both theme settings
 
 (Noon Break for lunch, resume at 1:30)
 
 ## Building upon contact-card
-- [ ] Start Docker Container
-  - `make start-contactcard`
+- [ ] Connect to contact-card
+  - `make connect-contactcard`
+- [ ] scaffold the component
+  - `polymer init`
+  - select `polymer1 component`
+  - name `contact-card`
+- [ ] restart the containers
+  - `make rebuild`
 - [ ] Open Preview at [http://localhost:8083/components/contact-card](http://localhost:8083/components/contact-card)
 
 ### Identify the variables we could add
@@ -109,12 +116,17 @@ We recommend using the [Visual Studio Code](https://code.visualstudio.com/) IDE.
 
 - [ ] update the demo to use these properties
 - [ ] Cover `<template is="dom-if" if="">` for if there's no link
-- [ ] add a toast via https://www.webcomponents.org/element/PolymerElements/paper-toast
 - [ ] wire up to on-click event of paper-button to a paper-toast
 - [ ] support for `<slot>` to get content into the dialog
 - [ ] update the demo to reflect this
 - [ ] add a paper-textarea for a silly two-way data binding example to title
+- [ ] emit an event with `this.fire()`
 
 # iron-ajax 3:00pm
+- [ ] open preview at [http://localhost:8084/components/elmsln-team](http://localhost:8084/components/elmsln-team)
 - [ ] utilize a public API -- https://www.elmsln.org/user.json?field_display_public_profile=1
-- [ ] Open Preview at [http://localhost:8084/components/elmsln-team](http://localhost:8084/components/elmsln-team)
+- [ ] utilize `template-repeat` to display a list of users
+- [ ] import the contact-card component
+- [ ] consult the contact-card component documentation to incorporate the component in our `template-repeat`
+- [ ] add an event listener to capture when the user clicks the website link in the contact-card
+- [ ] add a toast via https://www.webcomponents.org/element/PolymerElements/paper-toast
