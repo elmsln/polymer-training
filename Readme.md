@@ -73,7 +73,7 @@ We recommend using the [Visual Studio Code](https://code.visualstudio.com/) IDE.
   - sudo npm install -g bower
   - IDE - https://code.visualstudio.com/
 
-- [ ] Presentation: What are web components / Polymer, why should I care? (@btopro) (35 min)
+- [ ] Presentation: The history of web based platforms (@btopro) (35 min)
 
 # Getting into polymer
 
@@ -89,7 +89,7 @@ We recommend using the [Visual Studio Code](https://code.visualstudio.com/) IDE.
 - [ ] create multiple hello world elements in demo with different names
 - [ ] add some css to the element
 - [ ] add a `theme` property
-- [ ] use reflectToAttribute
+- [ ] use reflectToAttribute (https://www.polymer-project.org/1.0/docs/devguide/properties)
 - [ ] create `:host[theme="light"]` and `:host[theme="dark"]` css
 - [ ] update the demo to use both theme settings
 - [ ] add click event to switch theme
@@ -106,22 +106,16 @@ We recommend using the [Visual Studio Code](https://code.visualstudio.com/) IDE.
 - [ ] restart the containers
   - `make rebuild`
 - [ ] Open Preview at [http://localhost:8083/components/contact-card](http://localhost:8083/components/contact-card)
-
-### Identify the variables we could add
-- What fields would make up the content type?
-- What data types would these have?
-- What names would they be in an HTML element?
-### Identify accessbility / mobile issues with current
-  - add paper-button (to touch whole thing)
-  - webcomponents.org / bower install process
-
-- [ ] update the demo to use these properties
-- [ ] Cover `<template is="dom-if" if="">` for if there's no link
-- [ ] wire up to on-click event of paper-button to a paper-toast
-- [ ] support for `<slot>` to get content into the dialog
-- [ ] update the demo to reflect this
-- [ ] add a paper-textarea for a silly two-way data binding example to title
-- [ ] emit an event with `this.fire()`
+- [ ] Open webcomponents.org and search for `iron-icons`
+- [ ] Connect to contact-card
+  - `make connect-contactcard`
+- [ ] Get iron-icons added to your contact-card and implement an icon-icon for:
+  - email address
+  - phone number
+- [ ] Get paper-button from webcomponents.org in the same way and apply to contact card
+- [ ] Get paper-dialog and start to wire up
+- [ ] Add an event listener to the email button for tap event
+  - on-tap, fire an event that includes email and name values
 
 # iron-ajax 3:00pm
 - [ ] open preview at [http://localhost:8084/components/elmsln-team](http://localhost:8084/components/elmsln-team)
