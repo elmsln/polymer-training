@@ -8,9 +8,17 @@ This repo is made up of three different projects: hello-world, contact-card, and
 
 Install Docker from the official Docker website. Either [Docker for Mac](https://www.docker.com/docker-mac) or [Docker for Windows](https://www.docker.com/docker-windows).  Once Docker has been installed, open the application to allow it to run.
 
-To verify Docker has been installed, open 
+Verify that you have Docker installed by running:
+```
+docker
+```
 
 Install Git from [https://git-scm.com/](https://git-scm.com/)
+
+Verify that you have Git installed by running:
+```
+git
+```
 
 Once you have Git installed, git clone the [polymerday repo](https://github.com/LRNWebComponents/polymer-training).
 ```
@@ -18,25 +26,21 @@ git clone https://github.com/LRNWebComponents/polymer-training.git
 cd polymer-training
 ```
 
-Start Docker containers
+Start Docker containers:
 ```
 make start
 ```
 
 #### - OR -
 
-Mac Pro directions:
+Run one liner:
 ```
 cd ~/ && git clone https://github.com/LRNWebComponents/polymer-training.git && cd polymer-training && open -a /Applications/Docker.app && make start
 ```
 
 ### Verify Installation
 
-This should have started projects at the following locations:
-- [http://localhost:8082/components/hello-world](http://localhost:8082/components/hello-world)
-- [http://localhost:8083/components/contact-card](http://localhost:8083/components/contact-card)
-- [http://localhost:8084/components/starwars-searcher](http://localhost:8084/components/starwars-searcher)
-
+You should be able to see a "hello-world" element at [http://localhost:8082/components/hello-world](http://localhost:8082/components/hello-world)
 
 ### Manual (Non-Docker) Installation
 
