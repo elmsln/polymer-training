@@ -1,0 +1,115 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../paper-dialog/paper-dialog.html">
+<link rel="import" href="../iron-icons/iron-icons.html">
+<link rel="import" href="../iron-icons/communication-icons.html">
+
+<!--
+`contact-card`
+A generic contact card.
+
+@demo demo/index.html
+-->
+
+<dom-module id="contact-card">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      :host[has-name] #name {
+        display: block;
+        background-color:transparent;
+      }
+      #name {
+        font-size: 24px;
+        background-color: black;
+      }
+      paper-button {
+        --paper-button-ink-color: #FF0000;
+      }
+    </style>
+    <template is="dom-if" if="[[hasName]]">
+      <div>
+        <paper-button id="name" raised>view [[name]]'s profile</paper-button>
+      </div>
+    </template>
+    <paper-dialog id="mymodal" opened="{{opened}}">
+      <h2>[[name]]</h2>
+      <img src="[[photo]]" hidden$="[[!hasName]]" aria-hidden$="[[!hasName]]" />
+      <iron-icon icon="communication:email"></iron-icon>[[email]]
+      <iron-icon icon="communication:phone"></iron-icon>[[phone]]
+      <div class="buttons">
+        <paper-button dialog-dismiss>Cancel</paper-button>
+        <paper-button dialog-confirm autofocus>Accept</paper-button>
+      </div>
+    </paper-dialog>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'contact-card',
+      properties: {
+        /**
+         * This is the user's name
+         */
+        name: {
+          type: String,
+          value: null,
+        },
+        /**
+         * Does the user have a name?
+         */
+        hasName: {
+          type: Boolean,
+          computed: '_computeHasName(name)',
+          reflectToAttribute: true,
+        },
+        /**
+         * Opened state of the modal.
+         */
+        opened: {
+          type: Boolean,
+          value: false,
+          reflectToAttribute: true,
+        },
+        /**
+         * This is the user's email address.
+         */
+        email: {
+          type: String,
+          value: 'demo@local.host',
+        },
+        /**
+         * This is the user's email address.
+         */
+        phone: {
+          type: String,
+          value: '555-867-5309',
+        },
+        /**
+         * This is the user's photo.
+         */
+        photo: {
+          type: String,
+          value: 'https://picsum.photos/200/300',
+        },
+      },
+      ready: function() {
+        this.addEventListener('tap', function(e) {
+          this.$.mymodal.opened = true;
+        });
+      },
+      /**
+       * Compute if we have a name.
+       */
+      _computeHasName: function(name) {
+        if (name == null) {
+          return false;
+        }
+        return true;
+      },
+    });
+  </script>
+</dom-module>
