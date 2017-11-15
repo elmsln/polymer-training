@@ -1,5 +1,6 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../iron-ajax/iron-ajax.html">
+<link rel="import" href="../lrndesign-contactcard/lrndesign-contactcard.html">
 
 <!--
 `elmsln-team`
@@ -14,16 +15,38 @@
       :host {
         display: block;
       }
+      #people {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      lrndesign-contactcard {
+        margin: .3em;
+      }
+      lrndesign-contactcard ::shadow iron-icon {
+        fill: green;
+      }
     </style>
 
     <h1>ELMS:LN Team</h1>
 
-    <iron-ajax
-       auto
-       id="get_people"
-       url="[[url]]"
-       handle-as="json"
-       on-response="_getPeopleHandler"></iron-ajax>
+    [[people.length]]
+
+    <slot name="header"></slot>
+
+    <!-- <div id="people">
+      <template is="dom-repeat" items="[[people]]" as="person">
+        <lrndesign-contactcard
+          email$="[[person.name]]@psu.edu"
+          image="https://placehold.it/200x200"
+          position="[[person.field_job_title]]"
+          organization="[[person.field_organization]]"
+          name="[[person.field_full_name]]"></lrndesign-contactcard>
+      </template>
+    </div> -->
+
+    <slot></slot>
+
+    <iron-ajax auto id="get_people" url="[[url]]" handle-as="json" on-response="_getPeopleHandler"></iron-ajax>
 
   </template>
 
@@ -42,9 +65,18 @@
           value: 'https://www.elmsln.org/user.json?field_display_public_profile=1'
         }
       },
+      listeners: {
+        'email-changed': '_emailChanged'
+      },
+      _emailChanged: function (e) {
+        console.log(e);
+      },
       _getPeopleHandler: function (e) {
         const response = e.detail.response;
         const people = response.list;
+        console.log(people);
+        this.set('people', []);
+        this.set('people', people);
       },
     });
   </script>

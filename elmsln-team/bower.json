@@ -5,7 +5,8 @@
     "polymer": "Polymer/polymer#^1.4.0",
     "iron-ajax": "PolymerElements/iron-ajax#^2.0.5",
     "paper-card": "PolymerElements/paper-card#^2.0.0",
-    "paper-input": "PolymerElements/paper-input#^2.0.3"
+    "paper-input": "PolymerElements/paper-input#^2.0.3",
+    "lrndesign-contactcard": "LRNWebComponents/lrndesign-contactcard#^0.0.2"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",

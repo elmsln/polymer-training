@@ -12,9 +12,21 @@
     <style>
       :host {
         display: block;
+        background: lightblue;
+        color: darkgreen;
+        padding: .5em;
+        text-align: center;
+      }
+      :host[theme="light"] {
+        color: gray;
+        background: beige;
+      }
+      :host[theme="dark"] {
+        color: white;
+        background: darkblue;
       }
     </style>
-    <h2>Hello [[prop2]]!</h2>
+    <h2>Hello [[name]]!</h2>
   </template>
 
   <script>
@@ -23,10 +35,38 @@
       is: 'hello-world',
 
       properties: {
-        prop2: {
+        name: {
           type: String,
-          value: 'sdfdsf-world',
+          value: 'mike',
         },
+        /**
+         * Changes the color scheme to either 'light' or 'dark' themes.
+         */
+        theme: {
+          type: String,
+          value: 'light',
+          reflectToAttribute: true,
+        }
+      },
+
+      listeners: {
+        'click': 'toggleTheme'
+      },
+
+      ready: function () {
+        // this.addEventListener('click', this.toggleTheme);
+      },
+
+      /**
+       * Toggles the theme between the 'light' and 'dark' theme.
+       */
+      toggleTheme: function () {
+        if (this.theme === 'light') {
+          this.theme = 'dark';
+        }
+        else {
+          this.theme = 'light';
+        }
       },
 
     });
