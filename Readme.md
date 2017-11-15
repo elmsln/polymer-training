@@ -2,7 +2,7 @@
 
 ## Installation
 
-This repo is made up of three different projects: hello-world, awesome-explosion, and starwars-searcher. Each of these are polymer projects that use node, polymer-cli, and bower to install and run. There are two ways to install the depenendencies needed to run these projects. Docker and Manual. The two methods are outlined below.
+This repo is made up of three different projects: hello-world, contact-card, and starwars-searcher. Each of these are polymer projects that use node, polymer-cli, and bower to install and run. There are two ways to install the depenendencies needed to run these projects. Docker and Manual. The two methods are outlined below.
 
 ### Docker
 
@@ -34,7 +34,7 @@ cd ~/ && git clone https://github.com/LRNWebComponents/polymer-training.git && c
 
 This should have started projects at the following locations:
 - [http://localhost:8082/components/hello-world](http://localhost:8082/components/hello-world)
-- [http://localhost:8083/components/awesome-explosion](http://localhost:8083/components/awesome-explosion)
+- [http://localhost:8083/components/contact-card](http://localhost:8083/components/contact-card)
 - [http://localhost:8084/components/starwars-searcher](http://localhost:8084/components/starwars-searcher)
 
 
@@ -101,12 +101,12 @@ We recommend using the [Visual Studio Code](https://code.visualstudio.com/) IDE.
 - [ ] Make the property show up
 - [ ] Update the demo to reflect this property
 
-(Noon Break for lunch)
+(Noon Break for lunch, resume at 1:30)
 
-## Build upon this element Start at 1:30pm
+## Building upon contact-card
 - [ ] Start Docker Container
-  - `make start-awesomeexplosion`
-- [ ] Open Preview at [http://localhost:8083/components/awesome-explosion](http://localhost:8083/components/awesome-explosion)
+  - `make start-contactcard`
+- [ ] Open Preview at [http://localhost:8083/components/contact-card](http://localhost:8083/components/contact-card)
 
 ### Identify the variables we could add
 - What fields would make up the content type?
