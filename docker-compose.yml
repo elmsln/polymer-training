@@ -14,10 +14,10 @@ services:
       - ./contact-card/Dockerfile:/home/node/html/Dockerfile:ro
     ports:
       - '8083:8081'
-  starwars-searcher:
-    build: ./starwars-searcher
+  elmsln-team:
+    build: ./elmsln-team
     volumes:
-      - ./starwars-searcher:/home/node/html
-      - ./starwars-searcher/Dockerfile:/home/node/html/Dockerfile:ro
+      - ./elmsln-team:/home/node/html
+      - ./elmsln-team/Dockerfile:/home/node/html/Dockerfile:ro
     ports:
       - '8084:8081'

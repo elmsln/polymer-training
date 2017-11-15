@@ -2,7 +2,7 @@
 
 ## Installation
 
-This repo is made up of three different projects: hello-world, contact-card, and starwars-searcher. Each of these are polymer projects that use node, polymer-cli, and bower to install and run. There are two ways to install the depenendencies needed to run these projects. Docker and Manual. The two methods are outlined below.
+This repo is made up of three different projects: hello-world, contact-card, and elmsln-team. Each of these are polymer projects that use node, polymer-cli, and bower to install and run. There are two ways to install the depenendencies needed to run these projects. Docker and Manual. The two methods are outlined below.
 
 ### Docker
 
@@ -117,4 +117,4 @@ We recommend using the [Visual Studio Code](https://code.visualstudio.com/) IDE.
 
 # iron-ajax 3:00pm
 - [ ] utilize a public API -- https://www.elmsln.org/user.json?field_display_public_profile=1
-- [ ] Open Preview at [http://localhost:8084/components/starwars-searcher](http://localhost:8084/components/starwars-searcher)
+- [ ] Open Preview at [http://localhost:8084/components/elmsln-team](http://localhost:8084/components/elmsln-team)

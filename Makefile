@@ -30,12 +30,12 @@ start-contactcard:
 connect-contactcard:
 	docker-compose run contact-card /bin/bash
 
-# starwars-searcher
-start-starwarssearcher:
-	docker-compose up -d starwars-searcher
+# elmsln-team
+start-elmslnteam:
+	docker-compose up -d elmsln-team
 
-connect-starwarssearcher:
-	docker-compose run starwars-searcher /bin/bash
+connect-elmslnteam:
+	docker-compose run elmsln-team /bin/bash
 
 # API
 start-api:

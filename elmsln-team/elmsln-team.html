@@ -1,0 +1,51 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-ajax/iron-ajax.html">
+
+<!--
+`elmsln-team`
+
+
+@demo demo/index.html
+-->
+
+<dom-module id="elmsln-team">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <h1>ELMS:LN Team</h1>
+
+    <iron-ajax
+       auto
+       id="get_people"
+       url="[[url]]"
+       handle-as="json"
+       on-response="_getPeopleHandler"></iron-ajax>
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'elmsln-team',
+
+      properties: {
+        people: {
+          type: Array,
+          value: [],
+        },
+        url: {
+          type: String,
+          value: 'https://www.elmsln.org/user.json?field_display_public_profile=1'
+        }
+      },
+      _getPeopleHandler: function (e) {
+        const response = e.detail.response;
+        const people = response.list;
+      },
+    });
+  </script>
+</dom-module>
