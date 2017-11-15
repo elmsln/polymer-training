@@ -92,6 +92,7 @@ We recommend using the [Visual Studio Code](https://code.visualstudio.com/) IDE.
 - [ ] use reflectToAttribute
 - [ ] create `:host[theme="light"]` and `:host[theme="dark"]` css
 - [ ] update the demo to use both theme settings
+- [ ] add click event to switch theme
 
 (Noon Break for lunch, resume at 1:30)
 
