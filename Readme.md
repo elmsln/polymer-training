@@ -48,7 +48,7 @@ In case you can't install Docker or prefer not to here.
 
 - git - https://desktop.github.com/
 - node - https://nodejs.org/en/ (https://askubuntu.com/questions/925416/how-to-upgrade-node-js-from-4-2-to-6-11-0-on-ubuntu-16-04)
-- npm install -g polymer-cli@next
+- npm install -g polymer-cli
 - npm install -g bower
 
 
