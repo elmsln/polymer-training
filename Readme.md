@@ -13,6 +13,13 @@ Verify that you have Docker installed by running:
 docker
 ```
 
+Verify that you have Docker Compose install by running:
+```
+docker-compose
+```
+
+### Git
+
 Install Git from [https://git-scm.com/](https://git-scm.com/)
 
 Verify that you have Git installed by running:
@@ -29,13 +36,6 @@ cd polymer-training
 Start Docker containers:
 ```
 make start
-```
-
-#### - OR -
-
-Run one liner:
-```
-cd ~/ && git clone https://github.com/LRNWebComponents/polymer-training.git && cd polymer-training && open -a /Applications/Docker.app && make start
 ```
 
 ### Verify Installation
@@ -83,7 +83,7 @@ We recommend using the [Visual Studio Code](https://code.visualstudio.com/) IDE.
 
 ## Making a hello-world element (@hey__mp)
 
-- [ ] open Preview at [http://localhost:8082/components/hello-world](http://localhost:8082/components/hello-world)
+- [ ] open Preview at [http://0.0.0.0:8082/components/hello-world](http://0.0.0.0:8082/components/hello-world)
 - [ ] understanding the structure of this repo
 - [ ] add `name` property
 - [ ] create multiple hello world elements in demo with different names
