@@ -26,9 +26,8 @@
           *
           * @param {String} fixtureId ID of the fixture element in the document to use
           * @param {Array?} ignoredRules Array of rules to ignore for this suite
-          * @param {Function?} beforeEach Function to be called before each test to ensure proper setup
           */
-        context.a11ySuite = function(fixtureId, ignoredRules, beforeEach) {
+        context.a11ySuite = function(fixtureId, ignoredRules) {
           // capture a reference to the fixture element early
           var fixtureElement = document.getElementById(fixtureId);
           if (!fixtureElement) {
@@ -51,14 +50,6 @@
           a11ySuite.eachTest = function() {
             // instantiate fixture
             fixtureElement.create();
-
-            // Make sure lazy-loaded dom is ready (eg <template is='dom-repeat'>)
-            Polymer.dom.flush();
-
-            // If we have a beforeEach function, call it
-            if (beforeEach) {
-              beforeEach();
-            }
 
             // run audit
             var auditResults = axs.Audit.run(axsConfig);

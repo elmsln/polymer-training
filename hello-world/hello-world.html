@@ -1,10 +1,17 @@
 <link rel="import" href="../polymer/polymer.html">
-
+<link rel="import" href="../materializecss-styles/materializecss-styles.html">
+<link rel="import" href="../hax-body-behaviors/hax-body-behaviors.html">
+<link rel="import" href="../schema-behaviors/schema-behaviors.html">
 <!--
 `hello-world`
-
+A LRN element
 
 @demo demo/index.html
+
+@microcopy - the mental model for this element
+ -
+ -
+
 -->
 
 <dom-module id="hello-world">
@@ -12,63 +19,74 @@
     <style>
       :host {
         display: block;
-        background: lightblue;
-        color: darkgreen;
-        padding: .5em;
-        text-align: center;
-      }
-      :host[theme="light"] {
-        color: gray;
-        background: beige;
-      }
-      :host[theme="dark"] {
-        color: white;
-        background: darkblue;
       }
     </style>
-    <h2>Hello [[name]]!</h2>
+    <h2>[[title]]</h2>
   </template>
 
   <script>
     Polymer({
 
       is: 'hello-world',
-
+      behaviors: [HAXBehaviors.PropertiesBehaviors, MaterializeCSSBehaviors.ColorBehaviors, SchemaBehaviors.Schema],
       properties: {
-        name: {
-          type: String,
-          value: 'mike',
-        },
         /**
-         * Changes the color scheme to either 'light' or 'dark' themes.
+         * Title
          */
-        theme: {
+        title: {
           type: String,
-          value: 'light',
-          reflectToAttribute: true,
-        }
+        },
       },
-
-      listeners: {
-        'click': 'toggleTheme'
-      },
-
-      ready: function () {
-        // this.addEventListener('click', this.toggleTheme);
-      },
-
       /**
-       * Toggles the theme between the 'light' and 'dark' theme.
+       * Attached to the DOM, now fire.
        */
-      toggleTheme: function () {
-        if (this.theme === 'light') {
-          this.theme = 'dark';
-        }
-        else {
-          this.theme = 'light';
-        }
+      attached: function() {
+        // Establish hax property binding
+        let props = {
+          'canScale': true,
+          'canPosition': true,
+          'canEditSource': false,
+          'gizmo': {
+            'title': 'Sample gizmo',
+            'description': 'The user will be able to see this for selection in a UI.',
+            'icon': 'av:play-circle-filled',
+            'color': 'grey',
+            'groups': ['Video', 'Media'],
+            'handles': [
+              {
+                'type': 'video',
+                'url': 'source'
+              }
+            ],
+            'meta': {
+              'author': 'Your organization on github'
+            }
+          },
+          'settings': {
+            'quick': [
+              {
+                'property': 'title',
+                'title': 'Title',
+                'description': 'The title of the element',
+                'inputMethod': 'textfield',
+                'icon': 'editor:title',
+              },
+            ],
+            'configure': [
+              {
+                'property': 'title',
+                'title': 'Title',
+                'description': 'The title of the element',
+                'inputMethod': 'textfield',
+                'icon': 'editor:title',
+              },
+            ],
+            'advanced': [
+            ]
+          }
+        };
+        this.setHaxProperties(props);
       },
-
     });
   </script>
 </dom-module>

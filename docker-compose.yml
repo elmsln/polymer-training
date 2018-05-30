@@ -1,23 +1,13 @@
 version: '3'
 services:
+  lrndev:
+    image: heymp/lrndeveloper
+    volumes:
+      - .:/home/node/html
   hello-world:
-    build: ./hello-world
+    image: heymp/lrndeveloper
     volumes:
       - ./hello-world:/home/node/html
-      - ./hello-world/Dockerfile:/home/node/html/Dockerfile:ro
     ports:
-      - '8082:8081'
-  contact-card:
-    build: ./contact-card
-    volumes:
-      - ./contact-card:/home/node/html
-      - ./contact-card/Dockerfile:/home/node/html/Dockerfile:ro
-    ports:
-      - '8083:8081'
-  elmsln-team:
-    build: ./elmsln-team
-    volumes:
-      - ./elmsln-team:/home/node/html
-      - ./elmsln-team/Dockerfile:/home/node/html/Dockerfile:ro
-    ports:
-      - '8084:8081'
+      - '8082:8082'
+    command: polymer serve -p 8082 -H 0.0.0.0
