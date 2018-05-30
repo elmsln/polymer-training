@@ -94,34 +94,9 @@ We recommend using the [Visual Studio Code](https://code.visualstudio.com/) IDE.
 - [ ] update the demo to use both theme settings
 - [ ] add click event to switch theme
 
-(Noon Break for lunch, resume at 1:30)
 
-## Building upon contact-card
-- [ ] Connect to contact-card
-  - `make connect-contactcard`
-- [ ] scaffold the component
-  - `polymer init`
-  - select `polymer1 component`
-  - name `contact-card`
-- [ ] restart the containers
-  - `make rebuild`
-- [ ] Open Preview at [http://localhost:8083/components/contact-card](http://localhost:8083/components/contact-card)
-- [ ] Open webcomponents.org and search for `iron-icons`
-- [ ] Connect to contact-card
-  - `make connect-contactcard`
-- [ ] Get iron-icons added to your contact-card and implement an icon-icon for:
-  - email address
-  - phone number
-- [ ] Get paper-button from webcomponents.org in the same way and apply to contact card
-- [ ] Get paper-dialog and start to wire up
-- [ ] Add an event listener to the email button for tap event
-  - on-tap, fire an event that includes email and name values
-
-# iron-ajax 3:00pm
-- [ ] open preview at [http://localhost:8084/components/elmsln-team](http://localhost:8084/components/elmsln-team)
-- [ ] utilize a public API -- https://www.elmsln.org/user.json?field_display_public_profile=1
-- [ ] utilize `template-repeat` to display a list of users
-- [ ] import the contact-card component
-- [ ] consult the contact-card component documentation to incorporate the component in our `template-repeat`
-- [ ] add an event listener to capture when the user clicks the website link in the contact-card
-- [ ] add a toast via https://www.webcomponents.org/element/PolymerElements/paper-toast
+# nasa-search
+- [ ] utilize a public API -- `https://images-api.nasa.gov/search?media_type=image&q=`
+- [ ] utilize `iron-ajax` to make request to NASA API
+- [ ] utilize `template-repeat` to display a list of images
+- [ ] utilize `paper-input` to make search input
