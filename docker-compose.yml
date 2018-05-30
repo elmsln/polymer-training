@@ -16,5 +16,5 @@ services:
     volumes:
       - ./nasa-search:/home/node/html
     ports:
-      - '8084:8084'
-    command: polymer serve -p 8084 0.0.0.0
+      - '8083:8083'
+    command: polymer serve -p 8083 0.0.0.0
