@@ -18,3 +18,6 @@ top:
 # hello-world
 connect:
 	docker-compose run lrndev bash
+
+connect-as-root:
+	docker-compose run -u root lrndev bash
