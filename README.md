@@ -1,10 +1,10 @@
 # Overview
 
-## Installation
+This repo is made up of an LRN Developer Docker image and a hello-world example Polymer element. The LRN Developer image contains `node`, `polymer-cli`, `bower`, and `lrndeveloper` to assist in the creation of new Polymer elements and applications. It is HIGHLY recomended that you utilize the Docker installation process for Polymer training.  This will allow you to follow along with the trainers.
 
-This repo is made up of three different projects: hello-world, contact-card, and elmsln-team. Each of these are polymer projects that use node, polymer-cli, and bower to install and run. There are two ways to install the depenendencies needed to run these projects. Docker and Manual. The two methods are outlined below.
+# Installation
 
-### Docker
+## Docker (recommended)
 
 Install Docker from the official Docker website. Either [Docker for Mac](https://www.docker.com/docker-mac) or [Docker for Windows](https://www.docker.com/docker-windows).  Once Docker has been installed, open the application to allow it to run.
 
@@ -18,7 +18,18 @@ Verify that you have Docker Compose install by running:
 docker-compose
 ```
 
-### Git
+If you did not receive any errors then that means you've installed it correctly and can move on to installing Git. :)
+
+## Manual Installation (not recommended)
+
+In case you can't install Docker or prefer not to here.
+
+- git - https://desktop.github.com/
+- node - https://nodejs.org/en/ (https://askubuntu.com/questions/925416/how-to-upgrade-node-js-from-4-2-to-6-11-0-on-ubuntu-16-04)
+- npm install -g polymer-cli
+- npm install -g bower
+
+## Git
 
 Install Git from [https://git-scm.com/](https://git-scm.com/)
 
@@ -38,21 +49,14 @@ Start Docker containers:
 make start
 ```
 
-### Verify Installation
+## Verify Installation
 
 You should be able to see a "hello-world" element at [http://localhost:8082/components/hello-world](http://localhost:8082/components/hello-world)
 
-### Manual (Non-Docker) Installation
-
-In case you can't install Docker or prefer not to here.
-
-- git - https://desktop.github.com/
-- node - https://nodejs.org/en/ (https://askubuntu.com/questions/925416/how-to-upgrade-node-js-from-4-2-to-6-11-0-on-ubuntu-16-04)
-- npm install -g polymer-cli
-- npm install -g bower
 
 
-### IDE
+
+## IDE
 
 We recommend using the [Visual Studio Code](https://code.visualstudio.com/) IDE.  They have a number of plugins that are really handy for Polymer development.  Definitely not required but we really like it. :)
 
@@ -66,14 +70,8 @@ We recommend using the [Visual Studio Code](https://code.visualstudio.com/) IDE.
 - Similar presentation https://www.slideshare.net/BryanOllendyke1/web-components-polymer-and-aligning-drupals-destiny
 
 ## Why Polymer & Web components? Why now?
-- [ ] Getting polymer tooling setup (@hey__mp and anyone else who can help out)
-  - git - https://desktop.github.com/
-  - node - https://nodejs.org/en/ (https://askubuntu.com/questions/925416/how-to-upgrade-node-js-from-4-2-to-6-11-0-on-ubuntu-16-04)
-  - sudo npm install -g polymer-cli@next
-  - sudo npm install -g bower
-  - IDE - https://code.visualstudio.com/
-
 - [ ] Presentation: The history of web based platforms (@btopro) (35 min)
+- [ ] Getting Polymer tooling setup (@hey__mp and anyone else who can help out)
 
 # Getting into polymer
 
