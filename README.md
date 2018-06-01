@@ -37,7 +37,7 @@ Verify that you have Git installed by running:
 ```
 git
 ```
-
+## Get the docker container to start
 Once you have Git installed, git clone the [polymerday repo](https://github.com/LRNWebComponents/polymer-training).
 ```
 git clone https://github.com/LRNWebComponents/polymer-training.git
@@ -53,8 +53,15 @@ make start
 
 You should be able to see a "hello-world" element at [http://localhost:8082/components/hello-world](http://localhost:8082/components/hello-world)
 
+## Connect to the docker container to make a new project
+Leave this running and open a new command prompt.
+```
+cd polymer-training
+make connect
+lrndev
+```
 
-
+Choose option 1 to make a new boiler plate Polymer 1.x.x hybrid element.
 
 ## IDE
 
