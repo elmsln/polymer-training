@@ -1,7 +1,4 @@
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../materializecss-styles/materializecss-styles.html">
-<link rel="import" href="../hax-body-behaviors/hax-body-behaviors.html">
-<link rel="import" href="../schema-behaviors/schema-behaviors.html">
 <!--
 `hello-world`
 A LRN element
@@ -20,8 +17,11 @@ A LRN element
       :host {
         display: block;
       }
+      :host[disabled] {
+      	opacity: .3;
+      }
     </style>
-    <h2>[[title]]</h2>
+    <h2>[[name]]</h2>
   </template>
 
   <script>
@@ -30,10 +30,15 @@ A LRN element
       is: 'hello-world',
       properties: {
         /**
-         * Title
+         * Name
          */
-        title: {
+        name: {
           type: String,
+        },
+        disabled: {
+        	type: Boolean,
+        	value: false,
+        	reflectToAttribute: true,
         },
       },
     });

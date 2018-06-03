@@ -7,7 +7,9 @@
 <link rel="import" href="../paper-input/paper-input.html">
 <link rel="import" href="../paper-checkbox/paper-checkbox.html">
 <link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../paper-dialog/paper-dialog.html">
 <link rel="import" href="../iron-list/iron-list.html">
+<link rel="import" href="nasa-card.html">
 
 <!--
 `nasa-search`
@@ -44,12 +46,23 @@ A LRN element
     <paper-checkbox checked="{{autoUpdate}}">Live update</paper-checkbox>
     <paper-input label="Search term" value="{{searchValue}}"></paper-input>
     <paper-button id="button" raised>Search</paper-button>
-    <iron-list items="[[images]]" as="image">
+    <iron-list items="[[images]]" as="image" grid>
       <template>
-        <iron-image style="width:200px; height:200px;" sizing="cover"
-    src="[[image.links.0.href]]"></iron-image>
+        <paper-button on-click="tapped">
+          <nasa-card image="[[image.links.0.href]]" title="[[image.data.0.title]]" description="[[image.data.0.description]]"></nasa-card>
+        </paper-button>
       </template>
     </iron-list>
+    <paper-dialog id="dialog">
+      <h2>Learn more</h2>
+      <iron-image style="width:800px; height:400px;" sizing="cover"
+    src="[[activeitem.image]]"></iron-image>
+      <div>[[activeitem.description]]</div>
+      <div class="buttons">
+        <paper-button dialog-dismiss>Cancel</paper-button>
+        <paper-button dialog-confirm autofocus>Close</paper-button>
+      </div>
+    </paper-dialog>
   </template>
 
   <script>
@@ -89,6 +102,21 @@ A LRN element
           type: String,
           value: 'John Glenn',
         },
+      },
+
+      tapped: function(e) {
+        var normalizedEvent = Polymer.dom(e);
+        var local = normalizedEvent.localTarget;
+        console.log(local);
+        if (local.tagName !== 'NASA-CARD') {
+          local = local.children[0];
+        }
+        this.activeitem = {
+          'image': local.image,
+          'title': local.title,
+          'description': local.description,
+        };
+        this.$.dialog.toggle();
       },
       /**
        * Teh response object updated lowlz

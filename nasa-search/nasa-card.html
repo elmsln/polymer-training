@@ -1,5 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../iron-image/iron-image.html">
+<link rel="import" href="../paper-card/paper-card.html">
 
 <!--
 `nasa-card`
@@ -16,17 +16,38 @@ A LRN element
 <dom-module id="nasa-card">
   <template>
     <style>
+    :host {
+      display:block;
+      max-width: 400px;
+    }
+    paper-card {
+      max-height: 400px;
+      --paper-card-header-image: {
+        height: 200px;
+        opacity: .8;
+      };
+      --paper-card-header-image-text: {
+        background-color: black;
+        color: white;
+      };
+      --paper-card-content: {
+        max-height: 100px;
+        height: 100px;
+        overflow: scroll;
+      }
+    }
     </style>
-    hello
+    <paper-card heading="[[title]]" image="[[image]]" alt="">
+      <div class="card-content">
+        [[description]]
+      </div>
+    </paper-card>
   </template>
 
   <script>
     Polymer({
 
       is: 'nasa-card',
-      listeners: {
-        "button.tap": "_buttonTapped",
-      },
       properties: {
         /**
          * Long text
