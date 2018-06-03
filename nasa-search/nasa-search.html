@@ -1,0 +1,160 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../materializecss-styles/materializecss-styles.html">
+<link rel="import" href="../hax-body-behaviors/hax-body-behaviors.html">
+<link rel="import" href="../schema-behaviors/schema-behaviors.html">
+<link rel="import" href="../iron-image/iron-image.html">
+<link rel="import" href="../iron-ajax/iron-ajax.html">
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../paper-checkbox/paper-checkbox.html">
+<link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../iron-list/iron-list.html">
+
+<!--
+`nasa-search`
+A LRN element
+
+@demo demo/index.html
+
+@microcopy - the mental model for this element
+ -
+ -
+
+-->
+
+<dom-module id="nasa-search">
+  <template>
+    <style>
+      :host {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      iron-list {
+        flex: 1 1 auto;
+      }
+    </style>
+    <iron-ajax
+      id="request"
+      auto="[[autoUpdate]]"
+      url="https://images-api.nasa.gov/search?media_type=image&q=[[searchValue]]"
+      handle-as="json"
+      last-response="{{responseData}}"
+      debounce-duration="300"></iron-ajax>
+    <paper-checkbox checked="{{autoUpdate}}">Live update</paper-checkbox>
+    <paper-input label="Search term" value="{{searchValue}}"></paper-input>
+    <paper-button id="button" raised>Search</paper-button>
+    <iron-list items="[[images]]" as="image">
+      <template>
+        <iron-image style="width:200px; height:200px;" sizing="cover"
+    src="[[image.links.0.href]]"></iron-image>
+      </template>
+    </iron-list>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'nasa-search',
+      behaviors: [HAXBehaviors.PropertiesBehaviors, MaterializeCSSBehaviors.ColorBehaviors, SchemaBehaviors.Schema],
+      listeners: {
+        "button.tap": "_buttonTapped",
+      },
+      properties: {
+        /**
+         * Response object from the end point
+         */
+        responseData: {
+          type: Object,
+          observer: '_responseDataChanged',
+        },
+        /**
+         * autoUpdate the data feed when this checkbox is true
+         */
+        autoUpdate: {
+          type: Boolean,
+          value: true,
+        },
+        /**
+         * Images
+         */
+        images: {
+          type: Array,
+          value: [],
+        },
+        /**
+         * Active user input to search from
+         */
+        searchValue: {
+          type: String,
+          value: 'John Glenn',
+        },
+      },
+      /**
+       * Teh response object updated lowlz
+       */
+      _responseDataChanged: function(newValue, oldValue) {
+        if (newValue) {
+          console.log(newValue);
+          this.images = newValue.collection.items;
+        }
+      },
+      /**
+       * Button got tapped.
+       */
+      _buttonTapped: function(e) {
+        this.$.request.generateRequest();
+      },
+      /**
+       * Attached to the DOM, now fire.
+       */
+      attached: function() {
+        // Establish hax property binding
+        let props = {
+          'canScale': true,
+          'canPosition': true,
+          'canEditSource': false,
+          'gizmo': {
+            'title': 'Sample gizmo',
+            'description': 'The user will be able to see this for selection in a UI.',
+            'icon': 'av:play-circle-filled',
+            'color': 'grey',
+            'groups': ['Video', 'Media'],
+            'handles': [
+              {
+                'type': 'video',
+                'url': 'source'
+              }
+            ],
+            'meta': {
+              'author': 'Your organization on github'
+            }
+          },
+          'settings': {
+            'quick': [
+              {
+                'property': 'title',
+                'title': 'Title',
+                'description': 'The title of the element',
+                'inputMethod': 'textfield',
+                'icon': 'editor:title',
+              },
+            ],
+            'configure': [
+              {
+                'property': 'title',
+                'title': 'Title',
+                'description': 'The title of the element',
+                'inputMethod': 'textfield',
+                'icon': 'editor:title',
+              },
+            ],
+            'advanced': [
+            ]
+          }
+        };
+        this.setHaxProperties(props);
+      },
+    });
+  </script>
+</dom-module>
