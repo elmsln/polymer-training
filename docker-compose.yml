@@ -11,3 +11,10 @@ services:
     ports:
       - '8082:8082'
     command: polymer serve -p 8082 -H 0.0.0.0
+  nasa-search:
+    image: heymp/lrndeveloper
+    volumes:
+      - ./nasa-search:/home/node/html
+    ports:
+      - '8083:8083'
+    command: polymer serve -p 8083 -H 0.0.0.0
